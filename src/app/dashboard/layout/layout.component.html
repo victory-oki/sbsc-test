@@ -1,0 +1,249 @@
+<div class="dashboard">
+  <!-- DASHBOARD HEADER -->
+  <header class="dashboard__header">
+    <h5 class="dashboard__header-title">Dashboard</h5>
+    <div class="dashboard__header-items">
+      <div class="dashboard__header-item">
+        <div class="dashboard__header-item--icon">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.1334 12.6667L9.0667 6.59999C9.6667 5.06665 9.33337 3.26665 8.0667 1.99999C6.73337 0.666654 4.73337 0.399988 3.13337 1.13332L6.00003 3.99999L4.00003 5.99999L1.0667 3.13332C0.266701 4.73332 0.600035 6.73332 1.93337 8.06665C3.20003 9.33332 5.00003 9.66665 6.53337 9.06665L12.6 15.1333C12.8667 15.4 13.2667 15.4 13.5334 15.1333L15.0667 13.6C15.4 13.3333 15.4 12.8667 15.1334 12.6667Z"
+              fill="#1B5BAC"
+            />
+          </svg>
+        </div>
+        <div class="dashboard__header-item--text blue">
+          Customize Dashboard
+        </div>
+      </div>
+      <div class="dashboard__header-item">
+        <div class="dashboard__header-item--text">
+          {{ date | date: "medium" }}
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- DASHBOARD HEADER CARDS -->
+  <div class="header-cards">
+    <div class="header-card dark">
+      <div class="header-card__title">Welcome back! Chidimma.</div>
+      <div class="header-card__body">
+        See overview of analytics and reporting metrics and a lot more
+        interesting stuffs you can do here.
+      </div>
+      <button class="header-card__btn">Take A Tour</button>
+      <img
+        src="assets/img/dashboard-img-1.png"
+        alt="image"
+        class="header-card__img"
+      />
+    </div>
+    <div class="header-card">
+      <div class="header-card__title">OPTIMIZED APPLICATION PROCESSING</div>
+      <div class="header-card__body">
+        We’ve optimized the system to process your application as fast as
+        possible. Click on the button below to get started.
+      </div>
+      <button class="header-card__btn">New Request</button>
+      <img
+        src="assets/img/dashboard-img-2.png"
+        alt="image"
+        class="header-card__img"
+      />
+    </div>
+  </div>
+
+  <!-- DASHBOARD CARDS -->
+  <div class="dashboard-cards">
+    <div class="dashboard-card blue">
+      <div class="dashboard-card__header">
+        <div class="dashboard-card__header-text">
+          <div class="dashboard-card__header-text--main">
+            Annual Play Budget
+          </div>
+          <div class="dashboard-card__header-text--sub">Summary</div>
+        </div>
+        <div class="dashboard-card__header-dropdown">
+          <div class="dashboard-card__header-dropdown--text">This Year</div>
+          <div class="dashboard-card__header-dropdown--icon">
+            <svg
+              width="9"
+              height="5"
+              viewBox="0 0 9 5"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.36875 0.368752L4.5 3.23125L1.63125 0.368752L0.75 1.25L4.5 5L8.25 1.25L7.36875 0.368752Z"
+                fill="#1A1423"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="backdrop">
+        <div class="dashboard-card__body">
+          <app-chart></app-chart>
+        </div>
+        <div class="dashboard-card__footer">
+          <div class="dashboard-card__footer-item">
+            <div class="dashboard-card__footer-item--sub">Total Play (NGN)</div>
+            <div class="dashboard-card__footer-item--main">
+              {{ dashboardData?.totalPlayBudget | number }}
+            </div>
+          </div>
+          <div class="dashboard-card__footer-item">
+            <div class="dashboard-card__footer-item--bullet">
+              <span class="indicator active"></span> Total Spent
+            </div>
+            <div class="dashboard-card__footer-item--bullet">
+              <span class="indicator"></span> Balance
+            </div>
+          </div>
+          <div class="dashboard-card__footer-item">
+            <div class="dashboard-card__footer-item--sub">
+              Total Spent (NGN)
+            </div>
+            <div class="dashboard-card__footer-item--main">
+              {{ dashboardData?.totalPlayBudgetSpent | number }}
+            </div>
+          </div>
+          <div class="dashboard-card__footer-item">
+            <div class="dashboard-card__footer-item--sub">Balance (NGN)</div>
+            <div class="dashboard-card__footer-item--main">
+              {{ dashboardData?.totalPlayBudgetBalance | number }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dashboard-card orange">
+      <div class="dashboard-card__header">
+        <div class="dashboard-card__header-text">
+          <div class="dashboard-card__header-text--main">
+            Annual Play Budget
+          </div>
+          <div class="dashboard-card__header-text--sub">Summary</div>
+        </div>
+        <div class="dashboard-card__header-dropdown">
+          <div class="dashboard-card__header-dropdown--text">This Year</div>
+          <div class="dashboard-card__header-dropdown--icon">
+            <svg
+              width="9"
+              height="5"
+              viewBox="0 0 9 5"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.36875 0.368752L4.5 3.23125L1.63125 0.368752L0.75 1.25L4.5 5L8.25 1.25L7.36875 0.368752Z"
+                fill="#1A1423"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="backdrop">
+        <div class="dashboard-card__body">
+          <app-chart
+            mainColor="FF6542"
+            subColor="F8E9E2"
+            percentage="0.5"
+            chartName="OPEX"
+          ></app-chart>
+        </div>
+        <div class="dashboard-card__footer">
+          <div class="dashboard-card__footer-item">
+            <div class="dashboard-card__footer-item--sub">Total Work (NGN)</div>
+            <div class="dashboard-card__footer-item--main">
+              {{ dashboardData?.totalWorkBudget | number }}
+            </div>
+          </div>
+          <div class="dashboard-card__footer-item">
+            <div class="dashboard-card__footer-item--bullet">
+              <span class="indicator active"></span> Total Spent
+            </div>
+            <div class="dashboard-card__footer-item--bullet">
+              <span class="indicator"></span> Balance
+            </div>
+          </div>
+          <div class="dashboard-card__footer-item">
+            <div class="dashboard-card__footer-item--sub">
+              Total Spent (NGN)
+            </div>
+            <div class="dashboard-card__footer-item--main">
+              {{ dashboardData?.totalWorkBudgetSpent | number }}
+            </div>
+          </div>
+          <div class="dashboard-card__footer-item">
+            <div class="dashboard-card__footer-item--sub">Balance (NGN)</div>
+            <div class="dashboard-card__footer-item--main">
+              {{ dashboardData?.totalWorkBudgetBalance | number }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dashboard-card gold primary">
+      <div class="dashboard-card__header">
+        <div class="dashboard-card__header-text">
+          <div class="dashboard-card__header-text--main">
+            Cards Count
+          </div>
+          <div class="dashboard-card__header-text--sub">Summary</div>
+        </div>
+      </div>
+      <div class="backdrop">
+        <div class="dashboard-card__body">
+          <app-chart
+            mainColor="F6AE2D"
+            subColor="FFFBF5"
+            percentage="0.8"
+            chartName="ASSETS"
+          ></app-chart>
+        </div>
+        <div class="dashboard-card__footer">
+          <div class="dashboard-card__footer-item">
+            <div class="dashboard-card__footer-item--sub">Total Cards</div>
+            <div class="dashboard-card__footer-item--main">
+              {{ dashboardData?.totalCardsCount | number }}
+            </div>
+          </div>
+          <div class="dashboard-card__footer-item">
+            <div class="dashboard-card__footer-item--bullet">
+              <span class="indicator active"></span> In-use
+            </div>
+            <div class="dashboard-card__footer-item--bullet">
+              <span class="indicator"></span> In-active
+            </div>
+          </div>
+          <div class="dashboard-card__footer-item">
+            <div class="dashboard-card__footer-item--sub">
+              Cards in-use
+            </div>
+            <div class="dashboard-card__footer-item--main">
+              {{ dashboardData?.totalCardsInUse | number }}
+            </div>
+          </div>
+          <div class="dashboard-card__footer-item">
+            <div class="dashboard-card__footer-item--sub">In-active</div>
+            <div class="dashboard-card__footer-item--main">
+              {{ dashboardData?.totalCardsInActive | number }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

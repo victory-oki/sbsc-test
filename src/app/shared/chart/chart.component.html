@@ -1,0 +1,15 @@
+<!-- <div class="chart tooltip" [id]="chartName" [title] = "(percentage * 100)+'%'"></div> -->
+<!-- <div class="tooltipWrapper">
+  <div class="tooltip">
+    <div class="chart" [id]="chartName"></div>
+    <span class="tooltip__content">This is some tooltip text!</span>
+  </div>
+</div> -->
+
+<div
+  class="chart"
+  [title]="percentage * 100 + '%'"
+  tooltip="Hi guys!"
+  flow="up"
+  [id]="chartName"
+></div>

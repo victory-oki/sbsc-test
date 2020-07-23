@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="container__left"></div>
+  <div class="container__right">
+    <div class="login__content">
+      <h4 class="error" *ngIf="errMsg">Pls verify your account</h4>
+      <header class="side-nav__header">
+        <img src="assets/img/logo.png" alt="" class="side-nav__header--logo" />
+        <span class="side-nav__header--text">Express Lands</span>
+      </header>
+      <h4 class="login__header">Login to your account</h4>
+      <div class="login__help">Welcome back!Please login to your account</div>
+      <form [formGroup]="loginForm">
+        <div class="form-group">
+          <div class="input__appendContainer">
+            <input
+              class="form-control u-pl-14"
+              id="exampleInputPassword1"
+              placeholder=""
+              formControlName="username"
+              type="text"
+            />
+            <span class="input__prepend">
+              KTS12562892 |
+            </span>
+          </div>
+          <em
+            *ngIf="username.invalid && username.dirty"
+            class="help-block text-error"
+          >
+            Username is Required
+          </em>
+        </div>
+        <div class="form-group">
+          <input
+            aria-describedby="emailHelp"
+            class="form-control"
+            id="exampleInputEmail1"
+            formControlName="password"
+            placeholder="Enter Password"
+            type="password"
+          />
+
+          <em
+            *ngIf="password.invalid && password.dirty"
+            class="help-block text-error"
+          >
+            Password is Required
+          </em>
+        </div>
+        <button
+          class="btn__primary"
+          type="submit"
+          [disabled]="loginForm.invalid || isLoading"
+          (click)="submit(loginForm.value)"
+        >
+          LOG IN
+          <div class="loadPage" *ngIf="isLoading">
+            <div class="loader__row">
+              <div class="loader"></div>
+            </div>
+          </div>
+        </button>
+        <button class="inline__btn">Forgot Password?</button>
+      </form>
+    </div>
+  </div>
+</div>

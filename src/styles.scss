@@ -1,1 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.progressbar__label {
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  text-align: center;
+  color: #000000;
+}
+
+.progressbar__label {
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  text-align: center;
+  color: #000000;
+}
+
+// LOADER STYLES
+.loader__row {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  // align-items: center;
+}
+
+.loadPage {
+  background: rgba(0, 0, 0, 0);
+  margin-left: 2rem;
+  // height: calc(100vh - 500px);
+}
+
+.loader {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  padding: 0px;
+  border-radius: 100%;
+  border: 5px solid;
+  border-top-color: #ff7816;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+  border-left-color: #ff7816;
+  border-right-color: rgba(255, 255, 255, 0.3);
+  -webkit-animation: loader 1s ease-in-out infinite;
+  animation: loader 1s ease-in-out infinite;
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loader {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
