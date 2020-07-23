@@ -3,6 +3,7 @@
   <div class="container__right">
     <div class="login__content">
       <h4 class="error" *ngIf="errMsg">Pls verify your account</h4>
+      <h4 class="error" *ngIf="errorMsg">{{ errorMsg }}</h4>
       <header class="side-nav__header">
         <img src="assets/img/logo.png" alt="" class="side-nav__header--logo" />
         <span class="side-nav__header--text">Express Lands</span>

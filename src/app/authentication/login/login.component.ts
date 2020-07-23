@@ -12,6 +12,7 @@ import { CurrentUserService } from "src/app/service/current-user/current-user.se
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   errMsg = false;
+  errorMsg: "";
   isLoading = false;
   constructor(
     private fb: FormBuilder,
@@ -36,6 +37,7 @@ export class LoginComponent implements OnInit {
   submit(val) {
     console.log(val);
     this.errMsg = false;
+    this.errorMsg = "";
     this.isLoading = true;
     this.authService.login(val).subscribe(
       (data) => {
@@ -51,6 +53,7 @@ export class LoginComponent implements OnInit {
       (error) => {
         this.isLoading = false;
         console.log(error);
+        this.errorMsg = error.error;
       }
     );
   }
