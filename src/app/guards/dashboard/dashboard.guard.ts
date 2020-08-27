@@ -30,7 +30,7 @@ export class DashboardGuard implements CanLoad, CanActivate {
       return true;
     } else {
       this.router.navigate(["/login"]);
-      return false;
+      return true;
     }
   }
   canActivate() {
@@ -38,7 +38,7 @@ export class DashboardGuard implements CanLoad, CanActivate {
       return true;
     } else {
       this.router.navigate(["/login"]);
-      return false;
+      return true;
     }
   }
 }

@@ -14,8 +14,6 @@ const routes: Routes = [
           import("../dashboard/dashboard.module").then(
             (m) => m.DashboardModule
           ),
-
-        canLoad: [DashboardGuard],
       },
     ],
   },

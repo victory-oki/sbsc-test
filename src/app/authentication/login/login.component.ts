@@ -38,24 +38,8 @@ export class LoginComponent implements OnInit {
     console.log(val);
     this.errMsg = false;
     this.errorMsg = "";
-    this.isLoading = true;
-    this.authService.login(val).subscribe(
-      (data) => {
-        console.log(data);
-        this.isLoading = false;
-        if (data.verification_status) {
-          this.currentUserService.addUser(data);
-          this.router.navigateByUrl("/dashboard");
-        } else {
-          this.errMsg = true;
-        }
-      },
-      (error) => {
-        this.isLoading = false;
-        console.log(error);
-        this.errorMsg = error.error;
-      }
-    );
+    // this.isLoading = true;
+    this.router.navigateByUrl("/dashboard");
   }
   ngOnInit(): void {}
 }
